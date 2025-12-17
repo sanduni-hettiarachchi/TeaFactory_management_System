@@ -1,0 +1,51 @@
+/* Container */
+.summary-container {
+  padding: 1.5rem; /* Tailwind p-6 */
+}
+
+/* Main heading */
+.summary-container h3 {
+  font-size: 1.5rem; /* Tailwind text-2xl */
+  font-weight: bold; /* Tailwind font-bold */
+  
+}
+
+/* Grid for summary cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* Tailwind gap-4 */
+  margin-top: 1.5rem; /* Tailwind mt-6 */
+}
+
+@media (min-width: 768px) {
+  .summary-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tailwind md:grid-cols-3 */
+  }
+}
+
+/* Maintenance Section */
+.maintenance-section {
+  margin-top: 3rem; /* Tailwind mt-12 */
+}
+
+/* Maintenance heading */
+.maintenance-section h4 {
+  text-align: center;
+  font-size: 1.5rem; /* Tailwind text-2xl */
+  font-weight: bold; /* Tailwind font-bold */
+}
+
+/* Maintenance Grid */
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* Tailwind gap-6 */
+  margin-top: 1.5rem; /* Tailwind mt-6 */
+}
+
+@media (min-width: 768px) {
+  .maintenance-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tailwind md:grid-cols-2 */
+  }
+}

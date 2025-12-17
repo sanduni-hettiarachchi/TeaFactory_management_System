@@ -1,0 +1,168 @@
+/* Remove default spacing */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Make the app container full height */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 250px; /* adjust if needed */
+  background-color: #2e7d32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0; /* remove extra top padding */
+  margin: 0;      /* remove margin */
+  box-sizing: border-box;
+}
+
+/* Main content takes remaining width */
+.main-content {
+  flex: 1;
+  background-color: #f5f5dc;
+  padding: 20px; /* adjust inner padding if needed */
+  overflow-y: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Global Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 0.6);
+}
+
+/* Remove any potential layout conflicts */
+.app-container,
+.sidebar,
+.main-content {
+  /* These should not have any styles that conflict with Layout.css */
+}
+
+/* === Force white backgrounds for all content containers (no inline black) ===
+   This global override ensures cards, headers, modals, charts and tables
+   are solid white and visually separated using the theme green for borders/shadows.
+*/
+.content > * ,
+.page-header,
+.card,
+.chart-card,
+.chart-container,
+.modal,
+.modal .modal-header,
+.filters-section,
+.controls-section,
+.notifications-container,
+.summary-card,
+.stat-card,
+.warehouse-card,
+.inventory-table-container,
+.table-card,
+.notifications-list .notification-item {
+  background: #ffffff !important;
+  color: #1f2d16 !important; /* dark green / not black for readable text */
+  border-radius: 12px !important;
+  border: 1px solid rgba(76, 175, 80, 0.06) !important; /* subtle green border */
+  box-shadow: 0 8px 32px rgba(76, 175, 80, 0.06) !important;
+  backdrop-filter: none !important; /* remove dark blurs that reduce contrast */
+  text-shadow: none !important;
+}
+
+/* Ensure page headers don't show the dark background or heavy shadow */
+.page-header {
+  background: #ffffff !important;
+  color: #2e7d32 !important;
+  box-shadow: 0 6px 20px rgba(46,125,50,0.06) !important;
+}
+
+/* Chart canvas sits on white card; keep canvas transparent so chart colors show */
+.chart-container,
+.chart-container canvas {
+  background: transparent !important;
+}
+
+/* Keep modals bright and clear */
+.modal-overlay {
+  background: rgba(255,255,255,0.6); /* soft white overlay, not dark */
+}
+
+.modal {
+  background: #ffffff !important;
+  color: #1f2d16 !important;
+}
+
+/* Tables/cards spacing consistency */
+.inventory-table-container,
+.notifications-container,
+.filters-section {
+  padding: 16px !important;
+}
+
+/* Accessibility: ensure strong contrast for text and interactive elements */
+.page-header h2,
+.card-content h3,
+.stat-value,
+.item-name,
+.warehouse-name {
+  color: #2e7d32 !important;
+  text-shadow: none !important;
+}
+
+/* Small screens: allow wrapping where needed but default to inline on desktop */
+@media (min-width: 769px) {
+  .filters-section .filter-controls,
+  .controls-section .filters,
+  .filter-controls {
+    flex-wrap: nowrap !important;
+  }
+}

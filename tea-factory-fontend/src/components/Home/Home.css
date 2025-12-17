@@ -1,0 +1,10 @@
+.home-container {
+  display: flex;
+}
+
+.home-main {
+  flex: 1;
+  margin-left: 16rem; /* was ml-64 */
+  background-color:#b5fcca; /* gray-100 */
+  height: 100vh;
+}

@@ -1,0 +1,58 @@
+.summary-card {
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 6px 8px; /* Reduced padding - top/bottom: 6px, left/right: 8px */
+  box-shadow: 0 2px 4px rgba(35, 223, 113, 0.1);
+  min-height: 20px; /* Reduced minimum height */
+}
+
+.summary-icon {
+  font-size: 3rem; /* icon size */
+  color: rgb(31, 127, 31);    /* teal color */
+  margin-right: 50px; /* space between icon and text */
+}
+
+.summary-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom background */
+.bg-light-green {
+  background-color: #50f882; /* Tailwind's green-100 */
+   
+}
+
+.bg-light-yellow{
+  background-color: #50f882;
+}
+
+.bg-light-red{
+  background-color:#50f882;
+}
+
+.bg-normal{
+  background-color: #50f882;
+}
+.summary-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.summary-number {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* ✅ Green text for summary content */
+.text-green {
+  color:  rgb(31, 127, 31); /* Tailwind green-600 */
+}
+
+/* If you want ALL summary text green */
+.summary-text, 
+.summary-number {
+  color: rgb(21, 84, 21); /* Change to your preferred green */
+}

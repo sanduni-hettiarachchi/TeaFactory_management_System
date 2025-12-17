@@ -1,0 +1,30 @@
+/* Navbar container */
+.navbar {
+  display: flex; /* Tailwind flex */
+  align-items: center; /* Tailwind items-center */
+  justify-content: space-between; /* Tailwind justify-between */
+  height: 3rem; /* Tailwind h-12 */
+  background-color: #065f46; /* Tailwind bg-teal-600 */
+  padding: 0 1.25rem; /* Tailwind px-5 */
+  color: white; /* Tailwind text-white */
+  
+}
+
+/* Welcome text */
+.navbar h {
+  margin: 0;
+  
+}
+
+.logout-btn {
+  padding: 0.50rem 1rem;   /* py-1 px-4 */
+  background-color: #0f766e;  /* bg-teal-700 */
+  color: white;
+  border: none;
+  border-radius: 4px; /* optional for smooth edges */
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #115e59; /* hover:bg-teal-800 */
+}

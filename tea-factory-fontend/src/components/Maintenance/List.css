@@ -1,0 +1,131 @@
+/* Main container */
+.listContainer {
+  padding: 1.5rem;
+  margin-left: 0; /* sidebar space */
+  margin-top: 3rem;   /* navbar space */
+}
+
+/* Header */
+.listHeader {
+  text-align: center;
+}
+
+.listHeader h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* Actions (search + add button) */
+.listActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.listActions input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.list-add-btn {
+  padding: 0.5rem 1rem;
+  background-color: #0d9488;
+  border-radius: 0.375rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.list-add-btn:hover {
+  background-color: #0f766e;
+}
+
+/* Table */
+.listTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background-color: white;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.listTable th,
+.listTable td {
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1.125rem; /* same as machines table */
+}
+
+.listTable th {
+  background-color: rgb(73, 220, 73); /* green header */
+  font-weight: 600;
+  color: white;
+}
+
+.listTable tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.listTable tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.action-buttons button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn {
+  background-color: #fbbf24; /* yellow */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #f59e0b;
+}
+
+.delete-btn {
+  background-color: #ef4444; /* red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.page-main1 {
+  flex: 1;
+  margin-left: 16rem; /* width of sidebar */
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;             /* full height */
+  background-color: #b5fcca; /* light green */
+  overflow-y: auto;          /* scroll if content overflows */
+}
+
+.listContainer1 {
+  padding: 1.5rem;
+  margin-left: 0;
+  margin-top: 3rem;
+  background-color: transparent; /* so the green from page-main shows */
+}

@@ -1,0 +1,74 @@
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: rgba(46, 125, 50, 0.85);
+  backdrop-filter: blur(12px);
+
+  color: white;
+  padding-top: 50px; /* more padding at top */
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.25);
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Sidebar title */
+.sidebar-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px !important; /* larger */
+  margin-bottom: 50px !important; /* more spacing */
+  color: #fff !important;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Menu items container */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* make it take remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* spread items evenly */
+}
+
+/* Each link */
+.sidebar-menu li {
+  margin: 0;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 4px 20px;      /* smaller top/bottom padding */
+  margin: 1px 10px;       /* smaller vertical margin */
+  font-size: 15px;        /* slightly smaller font */
+  line-height: 1.2;       /* reduce space between lines */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-link.active {
+  background-color: #81c784;
+  color: black;
+  font-weight: bold;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+

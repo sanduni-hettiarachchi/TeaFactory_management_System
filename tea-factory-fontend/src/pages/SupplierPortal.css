@@ -1,0 +1,217 @@
+/* Add these additional styles to your existing SupplierDashboard.css */
+
+.supplier-portal .supplier-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.supplier-portal .supplier-details {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.supplier-portal .supplier-since {
+  font-size: 14px;
+  color: #666;
+}
+
+.performance-section {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(76,175,80,0.08);
+}
+
+.performance-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-size: 20px;
+}
+
+.performance-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.metric {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+}
+
+.metric-icon.on-time {
+  background-color: #4caf50;
+}
+
+.metric-icon.lead-time {
+  background-color: #2196f3;
+}
+
+.metric-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.metric-bar {
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.metric-progress {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.items-container {
+  margin-top: 20px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.item-header {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.item-header h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #2e7d32;
+}
+
+.item-id {
+  font-size: 12px;
+  color: #666;
+}
+
+.item-details {
+  font-size: 14px;
+  color: #333;
+}
+
+.warehouse-info {
+  margin: 8px 0;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.supplied-items-section {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(76,175,80,0.08);
+}
+
+.supplied-items-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-size: 20px;
+}
+
+.no-items {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+/* Add these styles to fix the spacing issue */
+
+.supplier-portal {
+  padding-left: 0;
+  margin-left: 0;
+  width: 100%;
+}
+
+/* Adjust dashboard container for proper spacing */
+.supplier-dashboard.supplier-portal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure the layout container takes full width */
+.supplier-dashboard.supplier-portal > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make the charts section fill width properly */
+.charts-section {
+  width: 100%;
+}
+
+/* Make full use of available space by shrinking unnecessary margins */
+.dashboard-header,
+.summary-cards,
+.charts-section,
+.performance-section,
+.recent-orders-section,
+.supplied-items-section {
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+}

@@ -1,0 +1,109 @@
+/* Machines container */
+.machines-container {
+  padding: 1.5rem; /* Tailwind p-6 */
+ /* Tailwind ml-64 (to leave space for sidebar) */
+  margin-top: 3rem;  /* Tailwind mt-12 (to leave space for navbar) */
+  background-color: transparent; /* remove white */
+}
+
+/* Header */
+.machines-header {
+  text-align: center;
+   margin-top: 1rem; /* ✅ push content below navbar height */
+}
+
+.machines-header h3 {
+  font-size: 1.5rem; /* Tailwind text-2xl */
+  font-weight: bold; /* Tailwind font-bold */
+  color: #1f2937; /* Tailwind gray-800 */
+}
+
+/* Actions (search + add button) */
+.machines-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem; /* Tailwind mt-4 */
+}
+
+.machines-actions input {
+  padding: 0.5rem 1rem; /* Tailwind py-2 px-4 */
+  border: 1px solid #d1d5db; /* Tailwind border-gray-300 */
+  border-radius: 0.375rem; /* Tailwind rounded-md */
+}
+
+.add-machine-btn {
+  padding: 0.5rem 1rem; /* Tailwind py-2 px-4 */
+  background-color: #0d9488; /* Tailwind bg-teal-600 */
+  border-radius: 0.375rem; /* Tailwind rounded-md */
+  color: white;
+  text-decoration: none;
+  font-weight: 500; /* Tailwind font-medium */
+  transition: background-color 0.2s;
+}
+
+.add-machine-btn:hover {
+  background-color: #0f766e; /* Tailwind teal-700 */
+}
+
+/* Machines table */
+.machines-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem; /* Tailwind mt-6 */
+  background-color: rgba(255,255,255,0.9); /* semi-transparent */; /* Tailwind bg-white */
+  border-radius: 0.375rem; /* Tailwind rounded-md */
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Tailwind shadow-sm */
+}
+
+.machines-table th,
+.machines-table td {
+  border: 1px solid #e5e7eb; /* Tailwind border-gray-200 */
+  padding: 0.75rem; /* Tailwind p-3 */
+  text-align: center;
+  font-size: 1.125rem;  /* Tailwind text-lg */
+}
+
+.machines-table th {
+  background-color: rgb(73, 220, 73); /* Change top row color */
+  font-weight: 600; /* Tailwind font-semibold */
+  color: white; /* Ensure contrast */
+}
+
+
+.machines-table tr:nth-child(even) {
+  background-color: #f9fafb; /* Tailwind gray-50 */
+}
+
+.machines-table tr:hover {
+  background-color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+.page-container {
+  display: flex;
+}
+
+.page-main {
+  flex: 1;
+  margin-left: 16rem; /* width of sidebar */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area (next to sidebar) */
+.machines-main {
+ position: fixed;   /* stick to top */
+  top: 0;
+  left: 15rem;       /* assuming sidebar width */
+  width: calc(100% - 14rem);
+
+    /* above content */
+
+    height: 100vh; /* ✅ full screen height */
+  background-color: #b5fcca; /* light green */
+  overflow-y: auto; /* scroll if content overflows */
+
+  background-color: #b5fcca; /* light green - Tailwind green-50 */
+ 
+}
